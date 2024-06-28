@@ -1,0 +1,66 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Source your .vimrc
+source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+set relativenumber
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+nnoremap zsi <ESC>:source ~/.ideavimrc<CR>
+nnoremap zei <ESC>:e ~/.ideavimrc<CR>
+
+nnoremap zsd :action Debug<CR>
+nnoremap zss :action Stop<CR>
+nnoremap zgc :action CheckinProject<CR>
+nnoremap zgp :action Vcs.UpdateProject<CR>
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+map z; <ESC>A;
+map zro <Action>(Move)
+map zrn <Action>(RenameElement)
+map zrr <Action>(Refactorings.QuickListPopupAction)
+map zri <Action>(Inline)
+map zrp <Action>(IntroduceParameter)
+map zrv <Action>(IntroduceVariable)
+map zrf <Action>(IntroduceField)
+map zrm <Action>(ExtractMethod)
+map gu <Action>(GotoDeclaration)
+map gdd <Action>(ReSharperGotoImplementation)
+map qq :q<CR>
+map zn <Action>(GotoNextError)
+map hh ^
+map ll $
+map <M-k> <Action>(MethodUp)
+map <M-j> <Action>(MethodDown)
+map zcc ci"
+map zc' ci'
+map zuu <Action>(RiderUnitTestRepeatPreviousRunAction)
+map zlb <Action>(ToggleLineBreakpoint)
+map <Space> <Action>(AceWordStartAction)
+map zjp <Action>(ActivateJsonParserToolWindow)
+
+map zvv <Action>(VimPluginToggle)
