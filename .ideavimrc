@@ -1,3 +1,6 @@
+""" Map leader to z ---------------------
+let mapleader="z"
+
 " .ideavimrc is a configuration file for IdeaVim plugin. It uses
 "   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
@@ -14,8 +17,9 @@ set scrolloff=5
 set relativenumber
 " Do incremental searching.
 set incsearch
-set ideajoin
 set quickscope
+set ideajoin
+set ideastatusicon=enabled
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -76,3 +80,23 @@ map zvt <Action>(VimFindActionIdAction)
 map zfs <Action>(ToggleFullScreen)
 map ztc <Action>(ExpandCollapseToggleAction)
 map zss <Action>(SurroundWith)
+
+
+if has('ide')
+  " mappings and options that exist only in IdeaVim
+  map <leader>f <Action>(GotoFile)
+  map <leader>g <Action>(FindInPath)
+  map <leader>b <Action>(Switcher)
+
+  if &ide =~? 'intellij idea'
+    if &ide =~? 'community'
+      " some mappings and options for IntelliJ IDEA Community Edition
+    elseif &ide =~? 'ultimate'
+      " some mappings and options for IntelliJ IDEA Ultimate Edition
+    endif
+  elseif &ide =~? 'pycharm'
+    " PyCharm specific mappings and options
+  elseif &ide =~? 'rider'
+    " Rider specific mappings and options
+  endif
+endif
