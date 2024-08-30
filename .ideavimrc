@@ -14,6 +14,8 @@ set scrolloff=5
 set relativenumber
 " Do incremental searching.
 set incsearch
+set ideajoin
+set quickscope
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -40,9 +42,9 @@ nnoremap zgp :action Vcs.UpdateProject<CR>
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
 map z; <ESC>A;
+imap z; <ESC>A;
 map zro <Action>(Move)
-map zrn <Action>(RenameElement)
-map zrr <Action>(Refactorings.QuickListPopupAction)
+map zrr <Action>(RenameElement)
 map zri <Action>(Inline)
 map zrp <Action>(IntroduceParameter)
 map zrv <Action>(IntroduceVariable)
@@ -57,10 +59,20 @@ map ll $
 map <M-k> <Action>(MethodUp)
 map <M-j> <Action>(MethodDown)
 map zcc ci"
+map zb ciw
 map zc' ci'
 map zuu <Action>(RiderUnitTestRepeatPreviousRunAction)
+map zra <Action>(RiderUnitTestRunSolutionAction)
 map zlb <Action>(ToggleLineBreakpoint)
 map <Space> <Action>(AceWordStartAction)
 map zjp <Action>(ActivateJsonParserToolWindow)
+map ,m <Action>(FileStructurePopup)
+map ,g <Action>(Generate)
+map <C-M-k> <Action>(MoveLineUp)
+map <C-M-j> <Action>(MoveLineDown)
 
 map zvv <Action>(VimPluginToggle)
+map zvt <Action>(VimFindActionIdAction)
+map zfs <Action>(ToggleFullScreen)
+map ztc <Action>(ExpandCollapseToggleAction)
+map zss <Action>(SurroundWith)
