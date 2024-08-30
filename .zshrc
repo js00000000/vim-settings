@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="fino"
+ZSH_THEME="fino-time"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,13 +105,11 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Navigation Alias
-alias wpj="cd /home/js00000000/workspace"
-alias ppj="cd /home/js00000000/projects"
+alias pj="cd ~/projects"
 
 # Others
 alias open="powershell.exe start"
 alias dotnet="powershell.exe dotnet"
-alias bat="batcat"
 alias reload="source ~/.zshrc"
 alias zconf="vim ~/.zshrc"
 alias c="clear"
