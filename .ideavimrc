@@ -37,7 +37,7 @@ map <leader>ei <ESC>:e ~/.ideavimrc<CR>
 
 map <leader>sd <Action>(Debug)
 map <leader>ss <Action>(Stop)
-map <leader>gc <Action>(CheckinProject)
+map <leader>gc zra<Action>(CheckinProject)
 map <leader>gp <Action>(Vcs.UpdateProject)
 map <leader>ro <Action>(Move)
 map <leader>rr <Action>(RenameElement)
