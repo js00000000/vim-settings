@@ -65,7 +65,7 @@ map <leader>vt <Action>(VimFindActionIdAction)
 map <leader>fs <Action>(ToggleFullScreen)
 map <leader>tc <Action>(ExpandCollapseToggleAction)
 map <leader>ss <Action>(SurroundWith)
-map <leader>aa <Action>(AIAssistant.Editor.GenerateCodeInplace)
+map <leader>aa <Action>(AIAssistant.Editor.AskAiAssistantInEditor)
 map <C-Enter> <Action>(IntentionActionAsAction_com.intellij.ml.llm.intentions.chat.AIAssistantIntention)
 map <M-q> <Action>(CloseAllEditorsButActive)
 map <C-t> <Action>(SearchEverywhere)
@@ -84,7 +84,7 @@ map qq :q<CR>
 map hh ^
 imap hh <ESC>^
 map ll $
-imap ll <ESC>$
+imap lk <ESC>$a
 imap jk <ESC>
 
 if has('ide')
